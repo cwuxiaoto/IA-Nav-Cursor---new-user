@@ -127,7 +127,7 @@
           </div>
           <div class="nav-sub">
             <a href="#" class="nav-sub-item">Integration Marketplace</a>
-            <a href="#" class="nav-sub-item">AI Agents</a>
+            <a href="#" class="nav-sub-item" id="nav-agent-marketplace" data-page="agent-marketplace">AI Agents</a>
           </div>
         </div>
         <div class="nav-group">
@@ -290,34 +290,17 @@
       <!-- Home / Dashboard page (screenshot 1) -->
       <div class="page-content page-home" id="page-home">
       <main class="main-content home-dashboard">
-        <!-- New user onboarding: credit banner + welcome card -->
-        <div class="onboarding-credit-banner" id="onboarding-credit-banner">
-          <span class="onboarding-credit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z"/><path d="M5 21l1.5-4.5L10 15l-4.5-1.5L5 9l4.5 1.5L10 15l-1.5 4.5L5 21z"/><path d="M19 21l-1.5-4.5L13 15l4.5 1.5L19 21l1.5-4.5L22 15l-4.5-1.5L19 9z"/></svg></span>
-          <div class="onboarding-credit-content">
-            <h2 class="onboarding-credit-headline">You have $5 in free Inference Cloud credits!</h2>
-            <p class="onboarding-credit-desc">Deploy AI models, run inference workloads, and explore the platform — on us. Credits expire in 60 days.</p>
+        <p class="date-text">Feb 4, 2026, Wednesday</p>
+        <div class="home-welcome-row">
+          <div class="home-welcome-left">
+            <h1 class="welcome-title home-hero-heading">Welcome aboard,</h1>
+            <span class="home-welcome-team"><span class="home-welcome-team-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span> My Team</span>
           </div>
-          <a href="#" class="onboarding-credit-cta" data-page="explore-models">Explore Inference Products <span aria-hidden="true">&#8594;</span></a>
-          <button type="button" class="onboarding-credit-dismiss" id="onboarding-credit-dismiss" aria-label="Dismiss"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
-        </div>
-        <div class="onboarding-welcome-card">
-          <span class="onboarding-welcome-avatar" aria-hidden="true">S</span>
-          <div class="onboarding-welcome-text">
-            <h2 class="onboarding-welcome-title">Welcome, Serena</h2>
-            <p class="onboarding-welcome-sub">Let's get your first AI workload up and running.</p>
+          <div class="home-welcome-banner" id="home-welcome-bonus-banner">
+            <span class="home-welcome-banner-icon" aria-hidden="true">🎁</span>
+            <p class="home-welcome-banner-text">Welcome bonus unlocked! You've received $5 in credits to get started on any of the inference products. Happy building! 👋</p>
+            <button type="button" class="home-welcome-banner-dismiss" id="home-welcome-bonus-dismiss" aria-label="Dismiss"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
           </div>
-          <div class="onboarding-welcome-spend">
-            <span class="onboarding-spend-label">CURRENT SPEND</span>
-            <span class="onboarding-spend-value">$0.00</span>
-            <span class="onboarding-spend-meta">No usage yet</span>
-          </div>
-        </div>
-
-        <p class="date-text">Mar 4, 2026, Wednesday</p>
-        <h1 class="welcome-title home-hero-heading">Build the next big thing with AI.</h1>
-        <div class="home-project-pill">
-          <span class="home-project-avatar">LP</span>
-          <a href="#" class="home-project-link">AI-First Project</a>
         </div>
 
         <div class="home-hero-grid">
@@ -329,8 +312,9 @@
             <h2 class="home-hero-featured-title">Deploy Llama 3.2 &amp; DeepSeek in seconds</h2>
             <p class="home-hero-featured-desc">Serverless GPU power for your production models. Zero setup, global scale, and pay-per-token pricing.</p>
             <div class="home-hero-featured-actions">
-              <a href="#" class="home-hero-btn home-hero-btn-primary" data-page="explore-models">Start Building for Free <span class="home-hero-btn-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span></a>
-              <span class="home-hero-credit-hint">Use your $5 credit now</span>
+              <a href="#" class="home-hero-btn home-hero-btn-primary" data-page="explore-models">Start Building Free <span class="home-hero-btn-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span></a>
+              <span class="home-hero-api-hint">No configuration needed</span>
+              <span class="home-hero-api-hint home-hero-api-hint-caps">API KEYS AVAILABLE INSTANTLY</span>
             </div>
           </div>
           <div class="home-hero-right">
@@ -355,48 +339,172 @@
           </div>
         </div>
 
-        <h2 class="section-title home-section-title">QUICK ACTIONS</h2>
+        <h2 class="section-title home-section-title">Quick Actions</h2>
         <div class="quick-actions home-quick-actions">
-          <button class="quick-action-btn quick-action-btn-primary" data-page="explore-models">Deploy AI Model</button>
-          <button class="quick-action-btn" data-page="gpu-droplets">Create a Droplet</button>
-          <button class="quick-action-btn">Invite team members</button>
-          <button class="quick-action-btn">View billing</button>
-          <button class="quick-action-btn">Create resource alerts</button>
-          <button class="quick-action-btn">Create a Project</button>
+          <button class="quick-action-btn quick-action-btn-icon" data-page="explore-models"><span class="quick-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14l-1.5-4.5L6 8l4.5-1.5L12 2z"/></svg></span> Create a model</button>
+          <button class="quick-action-btn quick-action-btn-icon" data-page="gpu-droplets"><span class="quick-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></span> Create a Droplet</button>
+          <button class="quick-action-btn quick-action-btn-icon"><span class="quick-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg></span> Create a ticket</button>
+          <button class="quick-action-btn quick-action-btn-icon"><span class="quick-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M20 12v10H4V12"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/></svg></span> View billing</button>
+          <button class="quick-action-btn quick-action-btn-icon"><span class="quick-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span> Invite team members</button>
+          <button class="quick-action-btn quick-action-btn-icon"><span class="quick-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></span> Create resource alerts</button>
         </div>
+
+        <section class="home-inference-pulse">
+          <div class="home-inference-pulse-header">
+            <h2 class="home-inference-pulse-heading">Inference pulse</h2>
+            <a href="#" class="home-inference-pulse-link" data-page="inference-overview">Go to Inference Hub <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="home-inference-pulse-card">
+            <div class="home-inference-pulse-credits-pill">
+              <span class="home-inference-pulse-credits-amount">$5</span> in Inference credits available
+            </div>
+            <div class="home-inference-pulse-icon" aria-hidden="true">
+              <svg viewBox="0 0 80 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 44C10 44 4 38 4 30c0-6 4-12 10-14 0-6 6-10 12-10 4 0 8 2 10 6 4-2 10-2 14 2 4 4 6 10 6 16 0 8-6 14-14 14H18z" fill="currentColor" opacity="0.35"/>
+                <path d="M18 40c-4 0-8-4-8-10 0-4 2-8 6-10-2-4 0-8 4-10 2 0 4 0 6 2 2-4 6-4 10 0 4 2 6 6 6 10 0 6-4 10-8 10h-2z" fill="currentColor"/>
+                <path d="M24 12l2 3 3 1-1 3-2 2-3-1-2-3 1-3 2-2z" fill="currentColor"/><path d="M52 8l1.5 2.5 2.5 1-1 2.5-1.5 2-2.5-1-2.5-1 1-2.5 1.5-2z" fill="currentColor"/><path d="M62 22l1 2 2 1-1 2-1 2-2-1-2-1 1-2 1-2z" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 class="home-inference-pulse-title">Build your first AI feature</h3>
+            <p class="home-inference-pulse-desc">Interested in running inference? Automate support, generate content, extract data, or build intelligent features - no ML expertise needed. Just pick a model and call the API.</p>
+            <div class="home-inference-pulse-actions">
+              <button type="button" class="home-inference-pulse-btn-outline">See examples</button>
+              <a href="#" class="home-inference-pulse-btn-primary" data-page="explore-models">Get started</a>
+            </div>
+          </div>
+        </section>
 
         <div class="home-bottom-grid two-col">
           <section class="card home-projects-section">
-            <h2 class="card-title">Projects (1)</h2>
-            <a href="#" class="home-project-card" data-page="explore-models">
-              <span class="home-project-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14l-1.5-4.5L6 8l4.5-1.5L12 2z"/><path d="M5 20l1.5-4.5L10 14l-4.5-1.5L5 8l4.5 1.5L10 14l-1.5 4.5L5 20z"/><path d="M19 20l-1.5-4.5L14 14l4.5 1.5L19 20l1.5-4.5L22 14l-4.5-1.5L19 8z"/></svg></span>
+            <h2 class="card-title">Projects</h2>
+            <div class="home-projects-search-wrap">
+              <span class="home-projects-search-icon" aria-hidden="true">Q</span>
+              <input type="text" class="home-projects-search" placeholder="Search by name" aria-label="Search projects by name">
+            </div>
+            <a href="#" class="home-project-card home-project-card-my" data-page="explore-models">
+              <span class="home-project-card-icon home-project-card-wave" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M2 12c2 0 4-2 4-4s-2-4-4-4-4 2-4 4 2 4 4 4zm4 0c2 0 4-2 4-4s-2-4-4-4-4 2-4 4 2 4 4 4zm4 0c2 0 4 2 4 4s-2 4-4 4-4-2-4-4 2-4 4-4zm4 0c2 0 4 2 4 4s-2 4-4 4-4-2-4-4 2-4 4-4z"/></svg></span>
               <div class="home-project-card-body">
-                <h3 class="home-project-card-name">ai-inference-project</h3>
-                <p class="home-project-card-meta">0 active models</p>
-                <p class="home-project-card-desc">No resources yet. Use your $5 credit to get started.</p>
+                <h3 class="home-project-card-name">My Project</h3>
+                <p class="home-project-card-meta">0 resources</p>
+                <p class="home-project-card-desc">Active resources in this project</p>
+                <p class="home-project-card-empty">No resources yet</p>
               </div>
               <span class="home-project-card-arrow" aria-hidden="true">→</span>
             </a>
           </section>
-          <section class="card home-recommended-section">
-            <h2 class="card-title">Recommended for you</h2>
-            <div class="home-recommended-card">
-              <div class="home-recommended-main">
-                <span class="home-recommended-title">Deploy your first Inference API</span>
-                <span class="home-recommended-badge">CLAIM CREDIT</span>
-              </div>
-              <p class="home-recommended-desc">Your $5.00 credit will be automatically applied at checkout.</p>
-              <a href="#" class="home-recommended-btn" data-page="explore-models">Start Now</a>
+          <section class="card home-recommended-actions-section">
+            <h2 class="card-title">Recommended actions</h2>
+            <div class="home-recommended-actions-list">
+              <article class="home-recommended-action-card">
+                <button type="button" class="home-recommended-action-dismiss" aria-label="Dismiss"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+                <span class="home-recommended-action-tag home-recommended-action-tag-medium">Medium</span>
+                <h3 class="home-recommended-action-title">Unauthorized access attempt detected</h3>
+                <p class="home-recommended-action-cat">Security monitoring</p>
+                <a href="#" class="home-recommended-action-btn">Investigate further</a>
+              </article>
+              <article class="home-recommended-action-card">
+                <button type="button" class="home-recommended-action-dismiss" aria-label="Dismiss"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+                <span class="home-recommended-action-tag home-recommended-action-tag-high">High</span>
+                <h3 class="home-recommended-action-title">SSL certificate nearing expiration</h3>
+                <p class="home-recommended-action-cat">Website security</p>
+                <a href="#" class="home-recommended-action-btn">Renew now</a>
+              </article>
+              <article class="home-recommended-action-card">
+                <button type="button" class="home-recommended-action-dismiss" aria-label="Dismiss"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+                <span class="home-recommended-action-tag home-recommended-action-tag-low">Low</span>
+                <h3 class="home-recommended-action-title">Disk space nearing capacity</h3>
+                <p class="home-recommended-action-cat">System maintenance</p>
+                <a href="#" class="home-recommended-action-btn">Free up space</a>
+              </article>
             </div>
-            <div class="home-recommended-card home-recommended-card-invite">
-              <div class="home-recommended-invite-body">
-                <h3 class="home-recommended-invite-title">Invite your engineering team</h3>
-                <p class="home-recommended-invite-desc">Enable collaboration across projects</p>
-              </div>
-              <a href="#" class="home-recommended-invite-link"><span class="home-recommended-invite-link-text">Invite</span> <span class="home-recommended-invite-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span></a>
+            <div class="home-recommended-actions-pagination">
+              <span class="home-recommended-actions-range">1-3 of 100</span>
+              <button type="button" class="home-recommended-actions-nav" aria-label="Previous">←</button>
+              <button type="button" class="home-recommended-actions-nav" aria-label="Next">→</button>
             </div>
           </section>
         </div>
+
+        <div class="home-bottom-grid two-col">
+          <section class="card home-security-section">
+            <div class="home-security-header">
+              <h2 class="card-title">Security alerts</h2>
+              <a href="#" class="home-section-link">Go to Security →</a>
+            </div>
+            <div class="home-security-body home-card-inner">
+              <p class="home-security-title-row">
+                <span class="home-security-title">Looks like you don't have any scans yet</span>
+                <span class="home-security-badge">PRIVATE PREVIEW</span>
+              </p>
+              <p class="home-security-desc">Watchdeck helps you protect, manage, and monitor your infrastructure.</p>
+              <div class="home-security-actions">
+                <a href="#" class="home-security-btn-link">Start a Free Scan</a>
+                <a href="#" class="home-security-btn-primary">Explore Plans</a>
+              </div>
+            </div>
+          </section>
+          <section class="card home-monitoring-section">
+            <div class="home-monitoring-header">
+              <h2 class="card-title">Monitoring</h2>
+              <a href="#" class="home-section-link">Go to Monitoring →</a>
+            </div>
+            <div class="home-monitoring-body home-card-inner">
+              <p class="home-monitoring-status">No alerts</p>
+              <p class="home-monitoring-desc">Everything looks healthy. No alerts triggered.</p>
+              <a href="#" class="home-monitoring-btn">Go to monitoring</a>
+            </div>
+          </section>
+        </div>
+
+        <section class="card home-billing-section">
+          <div class="home-billing-header">
+            <h2 class="card-title">Billing Overview</h2>
+            <a href="#" class="home-section-link">View Billing →</a>
+          </div>
+          <div class="home-billing-body home-card-inner">
+            <p class="home-billing-status">No billing activity yet</p>
+            <p class="home-billing-desc">Once you start using resources, you'll see spend trends and projections here.</p>
+            <a href="#" class="home-billing-btn">View billing</a>
+          </div>
+        </section>
+
+        <section class="card home-resource-health-section">
+          <div class="home-resource-health-header">
+            <h2 class="card-title">Resource health</h2>
+            <div class="home-resource-health-filter-wrap">
+              <label for="home-resource-health-filter" class="home-resource-health-filter-label">Filter by resources</label>
+              <select id="home-resource-health-filter" class="home-resource-health-filter" aria-label="Filter by resources">
+                <option value="">Select resources</option>
+              </select>
+            </div>
+          </div>
+          <div class="home-resource-health-body home-card-inner">
+            <p class="home-resource-health-status">No health data available</p>
+            <p class="home-resource-health-desc">Metrics will appear here once you select a resource to monitor.</p>
+          </div>
+        </section>
+
+        <section class="card home-daily-tide-section">
+          <div class="home-daily-tide-header">
+            <h2 class="card-title">The Daily Tide</h2>
+            <div class="home-daily-tide-tabs" role="tablist">
+              <button type="button" class="home-daily-tide-tab" role="tab" aria-selected="false">
+                <span class="home-daily-tide-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg></span>
+                Blogs
+              </button>
+              <button type="button" class="home-daily-tide-tab home-daily-tide-tab-active" role="tab" aria-selected="true">
+                <span class="home-daily-tide-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+                Tutorials
+                <span class="home-daily-tide-tab-chevron" aria-hidden="true">▾</span>
+              </button>
+            </div>
+          </div>
+          <div class="home-daily-tide-body home-card-inner">
+            <p class="home-daily-tide-status">No articles available</p>
+            <p class="home-daily-tide-desc">Tutorials and Blogs will appear here to help you learn and build faster.</p>
+            <a href="#" class="home-daily-tide-btn">Browse tutorials</a>
+          </div>
+        </section>
       </main>
       </div>
       <!-- Build App page (two-step: 1 = Select kit, 2 = Customize) -->
@@ -1386,6 +1494,148 @@ for chunk in response:
           </aside>
         </div>
       </div>
+
+      <!-- Agent Marketplace page (AI Agents under Marketplace) -->
+      <div class="page-content page-agent-marketplace" id="page-agent-marketplace" hidden>
+        <main class="main-content agent-marketplace-main">
+          <h1 class="am-title">Agent Marketplace</h1>
+          <div class="am-filters">
+            <div class="am-filter">
+              <label class="am-filter-label">Solution categories</label>
+              <select class="am-select">
+                <option>FinOps</option>
+                <option>Security</option>
+                <option>DevOps</option>
+                <option>Monitoring</option>
+              </select>
+            </div>
+            <div class="am-filter">
+              <label class="am-filter-label">Use cases</label>
+              <select class="am-select">
+                <option>Reduce your costs</option>
+                <option>Compliance</option>
+                <option>Automation</option>
+              </select>
+            </div>
+          </div>
+
+          <section class="am-section">
+            <h2 class="am-section-title">Enhance your DigitalOcean workflows</h2>
+            <div class="am-grid">
+              <div class="am-card">
+                <div class="am-card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 36V12l16 12 16-12v24"/><path d="M24 24L8 12m16 0l16 12"/></svg></div>
+                <h3 class="am-card-title">FinOps Optimizer</h3>
+                <p class="am-card-subtitle">DigitalOcean AI Agent</p>
+                <p class="am-card-desc">Optimize cloud spend and resource allocation with AI-driven recommendations.</p>
+                <div class="am-card-tags"><span class="am-tag am-tag-do">DO</span><span class="am-tag">Add-ons</span><span class="am-tag">FinOps</span></div>
+                <button type="button" class="am-card-btn">Add AI Agent</button>
+              </div>
+              <div class="am-card">
+                <div class="am-card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M24 4l16 8v8l-16 8-16-8v-8l16-8z"/><path d="M24 20v8m0 0l-8-4m8 4l8-4"/><path d="M24 28v8m0 0l-16-8m16 8l16-8"/></svg></div>
+                <h3 class="am-card-title">Security Compliance</h3>
+                <p class="am-card-subtitle">DigitalOcean AI Agent</p>
+                <p class="am-card-desc">Automate security checks and compliance reporting across your infrastructure.</p>
+                <div class="am-card-tags"><span class="am-tag am-tag-do">DO</span><span class="am-tag">Security</span></div>
+                <button type="button" class="am-card-btn">Add AI Agent</button>
+              </div>
+              <div class="am-card">
+                <div class="am-card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="24" cy="14" r="4"/><circle cx="12" cy="30" r="4"/><circle cx="36" cy="30" r="4"/><path d="M24 18v6l-12 6m12-6l12 6"/><path d="M12 30l12-6 12 6"/></svg></div>
+                <h3 class="am-card-title">Kubernetes Autopilot</h3>
+                <p class="am-card-subtitle">DigitalOcean AI Agent</p>
+                <p class="am-card-desc">Intelligent scaling and management for your Kubernetes workloads.</p>
+                <div class="am-card-tags"><span class="am-tag am-tag-do">DO</span><span class="am-tag">DevOps</span><span class="am-tag">Kubernetes</span></div>
+                <button type="button" class="am-card-btn">Add AI Agent</button>
+              </div>
+              <div class="am-card">
+                <div class="am-card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="24" cy="10" rx="12" ry="4"/><path d="M12 10v22c0 2.2 5.4 4 12 4s12-1.8 12-4V10"/><path d="M12 22c0 2.2 5.4 4 12 4s12-1.8 12-4"/></svg></div>
+                <h3 class="am-card-title">Database Performance</h3>
+                <p class="am-card-subtitle">DigitalOcean AI Agent</p>
+                <p class="am-card-desc">Monitor and tune database performance with AI-powered insights.</p>
+                <div class="am-card-tags"><span class="am-tag am-tag-do">DO</span><span class="am-tag">Databases</span></div>
+                <button type="button" class="am-card-btn">Add AI Agent</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="am-section">
+            <h2 class="am-section-title">Boost your productivity with AI Agents</h2>
+            <div class="am-grid am-grid-nine">
+              <div class="am-card">
+                <div class="am-card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 36V12l16 12 16-12v24"/></svg></div>
+                <h3 class="am-card-title">Cost Analyzer</h3>
+                <p class="am-card-subtitle">Koku Cost Management</p>
+                <p class="am-card-desc">Deep-dive into cost breakdowns and forecasting.</p>
+                <div class="am-card-tags"><span class="am-tag">Add-ons</span><span class="am-tag">FinOps</span></div>
+                <button type="button" class="am-card-btn">Add Cost Agent</button>
+              </div>
+              <div class="am-card">
+                <div class="am-card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M24 4l16 8v8l-16 8-16-8v-8l16-8z"/></svg></div>
+                <h3 class="am-card-title">Threat Monitor</h3>
+                <p class="am-card-subtitle">Falco</p>
+                <p class="am-card-desc">Real-time threat detection and alerting.</p>
+                <div class="am-card-tags"><span class="am-tag">Security</span><span class="am-tag">Monitoring</span></div>
+                <button type="button" class="am-card-btn">Add Threat Agent</button>
+              </div>
+              <div class="am-card">
+                <div class="am-card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="24" cy="24" r="10"/><path d="M24 18v12l6-6"/></svg></div>
+                <h3 class="am-card-title">Statista Single Answer</h3>
+                <p class="am-card-subtitle">Statista</p>
+                <p class="am-card-desc">Get instant data-driven answers from Statista.</p>
+                <div class="am-card-tags"><span class="am-tag">Add-ons</span></div>
+                <button type="button" class="am-card-btn">Add AI Agent</button>
+              </div>
+              <div class="am-card">
+                <div class="am-card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="24" cy="14" r="4"/><circle cx="12" cy="30" r="4"/><circle cx="36" cy="30" r="4"/><path d="M24 18v6l-12 6m12-6l12 6"/></svg></div>
+                <h3 class="am-card-title">Kubernetes Dashboard</h3>
+                <p class="am-card-subtitle">Kubernetes Monitoring</p>
+                <p class="am-card-desc">Unified view of clusters and workloads.</p>
+                <div class="am-card-tags"><span class="am-tag">DevOps</span><span class="am-tag">Kubernetes</span></div>
+                <button type="button" class="am-card-btn">Add K8s Agent</button>
+              </div>
+              <div class="am-card">
+                <div class="am-card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M24 4l16 8v8l-16 8-16-8v-8l16-8z"/><path d="M24 20v8"/></svg></div>
+                <h3 class="am-card-title">Security Compliance</h3>
+                <p class="am-card-subtitle">DigitalOcean AI Agent</p>
+                <p class="am-card-desc">Automate security checks and compliance reporting.</p>
+                <div class="am-card-tags"><span class="am-tag">Security</span></div>
+                <button type="button" class="am-card-btn">Add AI Agent</button>
+              </div>
+              <div class="am-card">
+                <div class="am-card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="14" width="36" height="20" rx="2"/><path d="M14 14V8a4 4 0 0 1 8 0v6m8-6v2a4 4 0 0 1-8 0V8"/></svg></div>
+                <h3 class="am-card-title">API Gateway Integration</h3>
+                <p class="am-card-subtitle">Cloudflare Workers Agent</p>
+                <p class="am-card-desc">Connect and manage API gateways with AI.</p>
+                <div class="am-card-tags"><span class="am-tag">Serverless Framework</span></div>
+                <button type="button" class="am-card-btn">Add Serverless Agent</button>
+              </div>
+              <div class="am-card">
+                <div class="am-card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 36V12l16 12 16-12v24"/></svg></div>
+                <h3 class="am-card-title">FinOps Optimizer</h3>
+                <p class="am-card-subtitle">DigitalOcean AI Agent</p>
+                <p class="am-card-desc">Optimize cloud spend with AI-driven recommendations.</p>
+                <div class="am-card-tags"><span class="am-tag">FinOps</span></div>
+                <button type="button" class="am-card-btn">Add AI Agent</button>
+              </div>
+              <div class="am-card">
+                <div class="am-card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M24 4l16 8v8l-16 8-16-8v-8l16-8z"/></svg></div>
+                <h3 class="am-card-title">Security Compliance</h3>
+                <p class="am-card-subtitle">DigitalOcean AI Agent</p>
+                <p class="am-card-desc">Automate security and compliance reporting.</p>
+                <div class="am-card-tags"><span class="am-tag">Security</span></div>
+                <button type="button" class="am-card-btn">Add AI Agent</button>
+              </div>
+              <div class="am-card">
+                <div class="am-card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="14" width="36" height="20" rx="2"/><path d="M14 14V8a4 4 0 0 1 8 0v6"/></svg></div>
+                <h3 class="am-card-title">API Gateway Integration</h3>
+                <p class="am-card-subtitle">Cloudflare Workers Agent</p>
+                <p class="am-card-desc">Connect API gateways with AI.</p>
+                <div class="am-card-tags"><span class="am-tag">Serverless Framework</span></div>
+                <button type="button" class="am-card-btn">Add Serverless Agent</button>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
     </div>
   </div>
 
@@ -1722,11 +1972,11 @@ for chunk in response:
         });
         supportMenu.addEventListener('click', function(e) { e.stopPropagation(); });
       }
-      var creditBanner = document.getElementById('onboarding-credit-banner');
-      var creditDismiss = document.getElementById('onboarding-credit-dismiss');
-      if (creditBanner && creditDismiss) {
-        creditDismiss.addEventListener('click', function() {
-          creditBanner.hidden = true;
+      var welcomeBonusBanner = document.getElementById('home-welcome-bonus-banner');
+      var welcomeBonusDismiss = document.getElementById('home-welcome-bonus-dismiss');
+      if (welcomeBonusBanner && welcomeBonusDismiss) {
+        welcomeBonusDismiss.addEventListener('click', function() {
+          welcomeBonusBanner.hidden = true;
         });
       }
 

@@ -38,6 +38,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .sidebar-new .nav-item.has-chevron { padding: 12px 12px; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; color: #FFFFFF; text-transform: uppercase; }
 .sidebar-new .nav-item .nav-label { font-weight: 600; }
 .sidebar-new .chevron { color: #FFFFFF; opacity: 0.95; font-size: 10px; }
+.sidebar-new .nav-item-plain { display: flex; align-items: center; padding: 12px 12px; text-decoration: none; }
+.sidebar-new .nav-item-plain:hover { background: rgba(255,255,255,0.08); color: #fff; }
+.sidebar-new .sidebar-nav .nav-item-plain { font-size: 12px; font-weight: 500; letter-spacing: 0.02em; color: rgba(255,255,255,0.95); text-transform: none; }
+.sidebar-new .sidebar-nav .nav-item-plain .nav-label { font-weight: 500; }
 .sidebar-divider { height: 1px; background: rgba(255,255,255,0.18); margin: 0 14px 8px; }
 .project-list { padding-left: 12px !important; }
 .project-item { display: block; padding: 10px 12px; border-radius: 6px; color: #FFFFFF; font-size: 14px; text-decoration: none; }

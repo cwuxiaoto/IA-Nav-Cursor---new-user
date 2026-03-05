@@ -2637,7 +2637,8 @@ for chunk in response:
 
       if (onboardStep2Next) onboardStep2Next.addEventListener('click', function() {
         if (!onboardingProvider) return;
-        showOnboardStep(5);
+        completeOnboarding();
+        if (typeof showPage === 'function') showPage('home');
       });
 
       var onboardWelcomeLater = document.getElementById('onboard-welcome-later');
